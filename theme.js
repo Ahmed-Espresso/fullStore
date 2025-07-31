@@ -7,11 +7,24 @@ let wineCanvas, wineCtx, wineParticles = [];
 let coffeeCanvas, coffeeCtx, coffeeParticles = [];
 let sunsetCanvas, sunsetCtx, bubbles = [];
 
-const beanImg = new Image();
-beanImg.src = 'coffee.png';
-
-const appleImg = new Image();
-appleImg.src = 'apple.png';
+// إنشاء الصور بشكل متزامن
+const loadImages = async () => {
+  const beanImg = new Image();
+  const appleImg = new Image();
+  
+  await Promise.all([
+    new Promise(resolve => {
+      beanImg.onload = resolve;
+      beanImg.src = 'coffee.png';
+    }),
+    new Promise(resolve => {
+      appleImg.onload = resolve;
+      appleImg.src = 'apple.png';
+    })
+  ]);
+  
+  return { beanImg, appleImg };
+};
 
 // ------------- Day Theme -------------
 function initDayElements() {
@@ -58,7 +71,7 @@ function animateDay() {
 }
 
 // ------------- Wine Theme (تساقط التفاح) -------------
-function initWineElements() {
+function initWineElements(appleImg) {
   wineCanvas.width = window.innerWidth;
   wineCanvas.height = window.innerHeight;
   wineParticles = [];
@@ -66,7 +79,8 @@ function initWineElements() {
     wineParticles.push({
       x: Math.random() * wineCanvas.width,
       y: -Math.random() * wineCanvas.height,
-      speed: 0.1 + Math.random() * 1
+      speed: 0.1 + Math.random() * 1,
+      img: appleImg
     });
   }
 }
@@ -74,7 +88,7 @@ function initWineElements() {
 function drawWineScene() {
   wineCtx.clearRect(0, 0, wineCanvas.width, wineCanvas.height);
   for (let p of wineParticles) {
-    wineCtx.drawImage(appleImg, p.x, p.y, 20, 20);
+    wineCtx.drawImage(p.img, p.x, p.y, 20, 20);
     p.y += p.speed;
     if (p.y > wineCanvas.height) {
       p.y = -20;
@@ -89,7 +103,7 @@ function animateWine() {
 }
 
 // ------------- Coffee Theme -------------
-function initCoffeeElements() {
+function initCoffeeElements(beanImg) {
   coffeeCanvas.width = window.innerWidth;
   coffeeCanvas.height = window.innerHeight;
   coffeeParticles = [];
@@ -97,7 +111,8 @@ function initCoffeeElements() {
     coffeeParticles.push({
       x: Math.random() * coffeeCanvas.width,
       y: -Math.random() * coffeeCanvas.height,
-      speed: 0.1 + Math.random() * 1
+      speed: 0.1 + Math.random() * 1,
+      img: beanImg
     });
   }
 }
@@ -105,7 +120,7 @@ function initCoffeeElements() {
 function drawCoffeeScene() {
   coffeeCtx.clearRect(0, 0, coffeeCanvas.width, coffeeCanvas.height);
   for (let p of coffeeParticles) {
-    coffeeCtx.drawImage(beanImg, p.x, p.y, 20, 20);
+    coffeeCtx.drawImage(p.img, p.x, p.y, 20, 20);
     p.y += p.speed;
     if (p.y > coffeeCanvas.height) {
       p.y = -20;
@@ -153,9 +168,22 @@ function animateSunset() {
 
 // ------------- Apply & Toggle -------------
 function applyTheme(initial = false) {
-  document.documentElement.className = '';
+  // إزالة أي ثيمات قديمة
+  document.documentElement.classList.remove('theme-night');
+  THEMES.forEach(t => {
+    document.documentElement.classList.remove(`theme-${t}`);
+  });
+  
+  // تطبيق الثيم الجديد
   document.documentElement.classList.add(`theme-${theme}`);
-  if (initial) document.documentElement.style.visibility = '';
+  
+  // جعل الصفحة مرئية
+  document.documentElement.style.visibility = 'visible';
+  
+  if (initial) {
+    // تحديث أيقونة الثيم
+    updateIcon();
+  }
 }
 
 function toggleTheme() {
@@ -168,24 +196,32 @@ function toggleTheme() {
 
 function updateIcon() {
   const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  
   const icon = btn.querySelector('i');
+  if (!icon) return;
+  
   const map = {
-    day:   'fas fa-moon',
+    day: 'fas fa-moon',
     wine: 'fas fa-apple-alt',
     coffee: 'fas fa-coffee',
     sunset: 'fas fa-wine-glass-alt'
   };
-  const cls = map[theme] || map.wine;
-  icon.className = cls;
+  
+  icon.className = map[theme] || map.wine;
 }
 
 // ------------- Startup -------------
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   // إنشاء عناصر Canvas لكل الثيمات
-  dayCanvas = document.createElement('canvas'); dayCanvas.id = 'day-canvas';
-  wineCanvas = document.createElement('canvas'); wineCanvas.id = 'wine-canvas';
-  coffeeCanvas = document.createElement('canvas'); coffeeCanvas.id = 'coffee-canvas';
-  sunsetCanvas = document.createElement('canvas'); sunsetCanvas.id = 'sunset-canvas';
+  dayCanvas = document.createElement('canvas'); 
+  dayCanvas.id = 'day-canvas';
+  wineCanvas = document.createElement('canvas'); 
+  wineCanvas.id = 'wine-canvas';
+  coffeeCanvas = document.createElement('canvas'); 
+  coffeeCanvas.id = 'coffee-canvas';
+  sunsetCanvas = document.createElement('canvas'); 
+  sunsetCanvas.id = 'sunset-canvas';
 
   // إضافة العناصر إلى body
   document.body.prepend(
@@ -201,32 +237,37 @@ document.addEventListener('DOMContentLoaded', () => {
   coffeeCtx = coffeeCanvas.getContext('2d');
   sunsetCtx = sunsetCanvas.getContext('2d');
 
+  // تحميل الصور
+  const { beanImg, appleImg } = await loadImages();
+
   // تهيئة الثيمات
-  initDayElements(); animateDay();
-  initWineElements(); animateWine();
-  initCoffeeElements(); animateCoffee();
-  initSunsetElements(); animateSunset();
+  initDayElements();
+  initWineElements(appleImg);
+  initCoffeeElements(beanImg);
+  initSunsetElements();
+  
+  // بدء الرسوم المتحركة
+  animateDay();
+  animateWine();
+  animateCoffee();
+  animateSunset();
 
   // تطبيق الثيم الأولي
   applyTheme(true);
-  updateIcon();
   
   // إضافة مستمع حدث للتبديل بين الثيمات
-  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
 
   // التعامل مع تغيير حجم النافذة
-  let lastW = window.innerWidth;
-  window.addEventListener('resize', () => {
-    const w = window.innerWidth;
-    if (w !== lastW) {
-      lastW = w;
-      [
-        dayCanvas, wineCanvas, 
-        coffeeCanvas, sunsetCanvas
-      ].forEach(c => {
-        c.width = w;
-        c.height = window.innerHeight;
-      });
-    }
-  });
+  const handleResize = () => {
+    initDayElements();
+    initWineElements(appleImg);
+    initCoffeeElements(beanImg);
+    initSunsetElements();
+  };
+
+  window.addEventListener('resize', handleResize);
 });
