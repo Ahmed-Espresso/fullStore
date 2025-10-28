@@ -2495,9 +2495,8 @@ html[lang="en"] .filter-select:last-child {
   
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.3rem;
-    padding: 1rem;
   }
   
   .contact-card i {
