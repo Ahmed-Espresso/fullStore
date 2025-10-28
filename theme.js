@@ -465,7 +465,7 @@ class ThemeSystem {
         if (!icon) return;
         
         const iconMap = {
-            day: 'fas fa-sun',
+            day: 'fas fa-moon',
             wine: 'fas fa-apple-alt',
             coffee: 'fas fa-coffee',
             sunset: 'fas fa-wine-glass-alt'
