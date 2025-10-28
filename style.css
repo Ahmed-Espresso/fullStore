@@ -3369,3 +3369,13 @@ html[lang="en"] .search-input-group input {
 .promotions-container::-webkit-scrollbar-thumb:hover {
     background: var(--nav-btn-hover-color);
 }
+
+#priceValue::placeholder {
+  color: var(--welcome-color) !important;
+  transition: color 3s ease;
+}
+
+#priceValue {
+  color: var(--welcome-color) !important;
+  transition: color 3s ease;
+}
