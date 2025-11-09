@@ -1,0 +1,2179 @@
+/* ==================================================
+   SMALL SCREENS (Up to 480px)
+================================================== */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  section {
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  /* Navigation */
+  #navsec {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #nav-btn {
+    padding: 0.5rem 1rem;
+    max-width: 100%;
+  }
+  
+  #nav-btn .nav-btn__item {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.5rem;
+    gap: 0.2rem;
+  }
+  
+  #nav-btn .nav-btn__item i {
+    font-size: 1.4rem;
+  }
+  
+  #nav-btn .nav-btn__item span {
+    font-size: 1rem;
+  }
+  
+  /* Welcome Section */
+  .typing-line {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Promotions Section */
+  .promo-card {
+    max-width: 85%;
+    padding: 10px;
+  }
+  
+  #promoTitle {
+    font-size: 1.4rem;
+    position: relative;
+    top: -10px;
+  }
+  
+  .discount-badge {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+  
+  .offer-countdown {
+    margin-top: 0.75rem;
+  }
+  
+  .time-block {
+    gap: 8px;
+    padding: 10px 12px;
+    align-items: baseline;
+  }
+  
+  .time-item span:first-child {
+    font-size: 2rem;
+    margin-bottom: -2px;
+  }
+  
+  .time-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: -2px;
+  }
+  
+  .separator {
+    font-size: 2.1rem;
+    align-self: baseline;
+    margin: 0 0.5rem;
+    align-self: baseline;
+  }
+  
+  .promo-header {
+    height: 140px;
+  }
+  
+  .promo-discount-banner {
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .discount-shine {
+    font-size: 0.8rem;
+  }
+  
+  .promo-title {
+    font-size: 1.1rem;
+  }
+  
+  .new-price {
+    font-size: 1.2rem;
+  }
+  
+  .time-value {
+    font-size: 1.4rem;
+  }
+
+  /* Chatbot Section */
+  .chat-container {
+    max-width: 90%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .chat-header {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .bot-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .bot-info #bot-name {
+    font-size: 1.5rem;
+  }
+  
+  .bot-status {
+    font-size: 1rem;
+  }
+  
+  .chat-box {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    max-height: 480px;
+  }
+  
+  .message {
+    max-width: 77%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  
+  .message.welcome {
+    padding: 0.75rem;
+  }
+  
+  .chat-footer {
+    padding: 0.3rem 0.3rem;
+  }
+  
+  .chat-input {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    margin-bottom: -15px;
+  }
+  
+  .send-btn,
+  .voice-btn {
+    font-size: 1rem;
+    top: 50%;
+  }
+  
+  .chat-box::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .message.bot h3 {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+  }
+  
+  .message.bot p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+  
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 0.2rem;
+  }
+  
+  .welcome-btn {
+    margin: 0.2rem 0.2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+  
+  /* FAQ Section */
+  #faqList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+  }
+  
+  .faq-item .faq-btn i {
+    font-size: 1.5rem;
+    max-width: 100%;
+    line-height: 0.8;
+    margin-top: 0.2rem;
+  }
+  
+  .faq-btn span {
+    font-size: 1rem;
+  }
+  
+  /* Services Section */
+  #servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  
+  .services-item i {
+    font-size: 1.7rem;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .services-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  
+  .services-item .text-wrapper p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0;
+  }
+  
+  /* Statistics Section */
+  #statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  
+  .stats-item i {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  
+  .stats-item p {
+    font-size: 1.7rem;
+  }
+  
+  .stats-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Contact Section */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+  }
+  
+  .contact-card i {
+    font-size: 2rem;
+    margin: 0.1rem 0;
+  }
+  
+  .contact-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  /* Quick Contact Form */
+  .quick-contact-form input,
+  .quick-contact-form textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  /* Portfolio Section */
+  .search-container {
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input-group {
+    padding: 0rem 0.5rem;
+  }
+  
+  .search-input-group input {
+    padding: 1rem 2rem;
+  }
+  
+  .port-head .title {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .port-head .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  .rating {
+    font-size: 1.4rem;
+  }
+  
+  .card-footer {
+    padding: 0.2rem 0 0;
+  }
+  
+  .carousel-dots {
+    bottom: 0.5rem;
+  }
+  
+  .carousel-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 0.2rem;
+  }
+  
+  .portfolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.5rem !important;
+  }
+  
+  .project-card {
+    min-width: 280px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    min-height: 420px !important;
+  }
+  
+  .card-header {
+    height: 200px !important;
+  }
+  
+  .card-title {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .description {
+    font-size: 0.95rem !important;
+    -webkit-line-clamp: 3 !important;
+    line-height: 1.4 !important;
+  }
+  
+  .price {
+    font-size: 1.2rem !important;
+  }
+  
+  .tag {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  .search-container {
+    overflow-x: hidden !important;
+    padding: 0.5rem !important;
+  }
+  
+  .search-box {
+    width: 100% !important;
+  }
+  
+  .card-footer {
+    flex-wrap: wrap !important;
+    gap: 0.1rem !important;
+  }
+  .carousel-dot {
+    min-width: 10px;
+    min-height: 10px;
+  }
+
+  /* Shopping Cart & Checkout */
+  #cart-popup, #checkout-form-popup {
+    min-height: 85%;
+    min-width: 85;
+  }
+  
+  .cart-item {
+    padding: 0.8rem;
+  }
+  
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cart-item-details h4 {
+    font-size: 1rem;
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+  }
+  
+  .quantity-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .quantity-input {
+    font-size: 1.1rem;
+  }
+  
+  .cart-total {
+    font-size: 1.1rem;
+  }
+  
+  #checkout-btn, #checkout-form button[type="submit"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .payment-methods {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .payment-option {
+    width: 100% !important;
+    margin: 0 !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: right;
+  }
+  
+  html[lang="en"] .payment-option {
+    text-align: left;
+  }
+
+  #cart-popup, 
+  #checkout-form-popup {
+    min-height: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 150px); 
+  }
+  
+  #checkout-form {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 120px); 
+  }
+  
+  .cart-footer {
+    padding: 12px 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+  }
+  
+  .checkout-buttons {
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+    margin-top: auto;
+  }
+  
+  .two-columns {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  
+  .phone-input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .country-code-group {
+    min-width: 100%;
+  }
+
+  /* Global Toast */
+  #global-toast {
+    bottom: 1rem;
+    padding: 0.6rem 1rem;
+    width: 75%;
+    max-width: 95%;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .details-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .product-quantity-controls,
+  .add-to-cart-btn {
+    transform: scale(0.9);
+    transform-origin: right;
+  }
+  
+  .info-icon i {
+    font-size: 1.6rem;
+  }
+  
+  .filters-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .filter-select, .filter-input {
+    min-width: 110px;
+    font-size: 0.8rem;
+    padding: 0.7rem 0.3rem;
+  }
+}
+
+/* ==================================================
+   MEDIUM SCREENS (481px - 1199px)
+================================================== */
+@media only screen and (min-width: 481px) {
+  section {
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+  }
+  
+  section h1 {
+    font-size: 2.2rem;
+  }
+  
+  /* Navigation */
+  #nav-btn {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  #nav-btn button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  #nav-btn button i {
+    font-size: 1.8rem;
+  }
+  
+  #nav-btn button span {
+    font-size: 1.2rem;
+  }
+  
+  /* Cart Icon */
+  #cart-icon-container {
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  #cart-count {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  
+  /* Portfolio Section */
+  .property-row, .price-row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
+  
+  .property-row label, .price-row label {
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+  }
+  
+  .property-row select, .price-row select {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .price-row input {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Chatbot Section */
+  .chat-container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .chat-box {
+    min-height: 500px;
+    max-height: 60vh;
+  }
+  
+  .message {
+    max-width: 80%;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .chat-input {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .welcome-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Promotions Section */
+  .promo-card {
+    max-width: 700px;
+    padding: 2rem;
+  }
+  
+  #promoTitle {
+    font-size: 2.5rem;
+  }
+  
+  .discount-badge {
+    width: 50%;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+  }
+  
+  .time-block {
+    padding: 1.2rem 1.8rem;
+    gap: 1.5rem;
+  }
+  
+  .time-item span:first-child {
+    font-size: 3rem;
+  }
+  
+  .time-label {
+    font-size: 1.1rem;
+  }
+  
+  .separator {
+    font-size: 2.5rem;
+  }
+  
+  /* Grid Sections */
+  #servicesGrid, #statsGrid, #contactGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .services-item i, .stats-item i, .contact-card i {
+    font-size: 2.5rem;
+  }
+  
+  .services-item h3, .stats-item h3, .contact-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .services-item p, .stats-item p {
+    font-size: 1.1rem;
+  }
+  
+  /* Shopping Cart */
+  .cart-item {
+    padding: 1rem;
+  }
+  
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cart-item-details h4 {
+    font-size: 1.2rem;
+  }
+  
+  .cart-item-price {
+    font-size: 1.1rem;
+  }
+  
+  .quantity-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .quantity-input {
+    font-size: 1.1rem;
+  }
+  
+  .cart-total {
+    font-size: 1.3rem;
+  }
+  
+  #checkout-btn, #checkout-form button[type="submit"] {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .info-icon i {
+    font-size: 1.8rem;
+  }
+  
+  #cart-popup, #checkout-form-popup {
+    min-height: 75%;
+    min-width: 80%;
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 150px); 
+  }
+  
+  #checkout-form {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 120px); 
+  }
+  
+  .cart-footer {
+    padding: 12px 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+  }
+  
+  .checkout-buttons {
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+    margin-top: auto;
+  }
+}
+
+/* ==================================================
+   LARGE SCREENS (1200px and above)
+================================================== */
+@media only screen and (min-width: 1200px) {
+  /* Navigation */
+  #nav-btn {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Chatbot Section */
+  .chat-container {
+    max-width: 900px;
+  }
+  
+  /* Promotions Section */
+  .promo-card {
+    max-width: 800px;
+  }
+  
+  /* Portfolio Section */
+  .card-header {
+    height: 280px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    font-size: 1.8rem;
+  }
+  
+  .tag {
+    font-size: 1rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  /* Shopping Cart */
+  #cart-popup, #checkout-form-popup {
+    min-height: 75%;
+    min-width: 75%;
+  }
+  
+  .cart-item {
+    padding: 0.8rem;
+  }
+  
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cart-item-details h4 {
+    font-size: 1rem;
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+  }
+  
+  .quantity-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .quantity-input {
+    font-size: 1.1rem;
+  }
+  
+  .cart-total {
+    font-size: 1.1rem;
+  }
+  
+  #checkout-btn, #checkout-form button[type="submit"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .payment-methods {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .payment-option {
+    width: 100% !important;
+    margin: 0 !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: right;
+  }
+  
+  html[lang="en"] .payment-option {
+    text-align: left;
+  }
+
+  #cart-popup, 
+  #checkout-form-popup {
+    min-height: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 150px); 
+  }
+  
+  #checkout-form {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 120px); 
+  }
+  
+  .cart-footer {
+    padding: 12px 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+  }
+  
+  .checkout-buttons {
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+    background: var(--cart-bg);
+    border-top: 2px solid var(--cart-border);
+    margin-top: auto;
+  }
+}
+
+/* ==================================================
+   LANDSCAPE ORIENTATION
+================================================== */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  #checkout-form-popup {
+    max-height: 85vh;
+  }
+  
+  .checkout-header {
+    padding: 0.5rem 1rem;
+  }
+  
+  #checkout-form {
+    padding: 0.5rem 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ==================================================
+   TOUCH DEVICE SUPPORT
+================================================== */
+@media (hover: none) and (pointer: coarse) {
+  .payment-option {
+    min-height: 44px;
+  }
+  
+  .checkout-confirm-btn {
+    min-height: 44px;
+  }
+  
+  .quantity-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .cart-items {
+    scrollbar-color: var(--welcome-color) transparent;
+  }
+  
+  .cart-items::-webkit-scrollbar-thumb {
+    background: var(--welcome-color);
+    opacity: 0.6;
+  }
+  
+  .cart-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  #checkout-form {
+    scrollbar-color: var(--welcome-color) transparent;
+  }
+  
+  #checkout-form::-webkit-scrollbar-thumb {
+    background: var(--welcome-color);
+    opacity: 0.6;
+  }
+  
+  #checkout-form::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ==================================================
+   HOVER DEVICE SUPPORT
+================================================== */
+@media (hover: hover) {
+  #checkout-btn:hover,
+  .checkout-confirm-btn:hover,
+  #confirm-checkout:hover,
+  #qcSubmit:hover,
+  .qc-buttons button:hover,
+  .promo-button:hover,
+  .add-to-cart-btn:hover,
+  .payment-option:hover {
+      transform: translateY(-2px);
+  }
+  
+  #checkout-btn:active,
+  .checkout-confirm-btn:active,
+  #confirm-checkout:active,
+  #qcSubmit:active,
+  .qc-buttons button:active,
+  .promo-button:active,
+  .add-to-cart-btn:active,
+  .payment-option:active {
+      transform: translateY(-1px) scale(0.95);
+  }
+}
+
+/* ==================================================
+   TABLET ENHANCEMENTS (481px - 768px)
+================================================== */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Navigation */
+  #navsec {
+    padding: 0.5rem;
+    justify-content: center;
+  }
+  
+  #nav {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  #nav-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  .nav-btn__item {
+    flex: 1;
+    min-width: 0;
+    padding: 1.2rem 0.8rem !important;
+    font-size: 1.1rem;
+    gap: 0.8rem;
+    border-radius: 1rem;
+    background: var(--nav-btn-bg, rgba(255,255,255,0.1));
+  }
+  
+  .nav-btn__item i {
+    font-size: 2.2rem !important;
+  }
+  
+  .nav-btn__item span {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+  }
+  
+  /* Cart Icon */
+  #cart-icon-container {
+    width: 75px !important;
+    height: 75px !important;
+    bottom: 25px;
+    right: 25px;
+  }
+  
+  #cart-icon-container i {
+    font-size: 2.2rem !important;
+  }
+  
+  #cart-count {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+  
+  /* FAQ Section */
+  #faqList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .faq-item .faq-btn {
+    padding: 1.2rem 0.8rem;
+    border-radius: 1.2rem;
+    border-width: 3px;
+  }
+  
+  .faq-btn i {
+    font-size: 2.8rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .faq-btn span {
+    font-size: 1.3rem !important;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+  
+  .answer-container {
+    padding: 2.5rem;
+    font-size: 1.7rem;
+    border-width: 3px;
+    border-radius: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  
+  /* Services Section */
+  #servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .services-item {
+    padding: 1rem 0.5rem;
+    border-radius: 1.2rem;
+    border-width: 3px;
+  }
+  
+  .services-item i {
+    font-size: 3rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .services-item h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-item .text-wrapper p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .contact-card {
+    padding: 1rem 0.5rem;
+    border-radius: 1.2rem;
+    border-width: 3px;
+  }
+  
+  .contact-card i {
+    font-size: 2.8rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Welcome Text */
+  .typing-line {
+    font-size: 2.8rem;
+    line-height: 1.4;
+  }
+  
+  /* Section Headers */
+  section h1 {
+    font-size: 2.8rem;
+    margin: 2.5rem auto;
+  }
+  
+  .sec-h1 h1 {
+    font-size: 2.8rem !important;
+  }
+  
+  /* Cards */
+  .promo-card,
+  .services-item,
+  .contact-card,
+  .stats-item,
+  .faq-item .faq-btn {
+    border-radius: 1.2rem;
+  }
+  
+  /* About Content */
+  #aboutContent {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding: 0 1.5rem;
+  }
+  
+  /* Forms */
+  .quick-contact-form {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+  }
+  
+  .quick-contact-form input,
+  .quick-contact-form textarea,
+  .quick-contact-form select {
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+  }
+  
+  .qc-buttons button {
+    padding: 1.2rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 1.2rem;
+  }
+  
+  /* Chatbot */
+  .chat-container {
+    max-width: 90%;
+    border-radius: 1.5rem;
+  }
+  
+  .chat-header {
+    padding: 1.2rem;
+  }
+  
+  .bot-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .bot-info #bot-name {
+    font-size: 1.8rem;
+  }
+  
+  .bot-status {
+    font-size: 1.2rem;
+  }
+  
+  .chat-box {
+    min-height: 450px;
+    border-radius: 1.2rem;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
+  }
+  
+  .chat-input {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+  }
+  
+  .send-btn,
+  .voice-btn {
+    font-size: 1.5rem;
+  }
+  
+  /* Promotions */
+  .promotions-container {
+    gap: 1.8rem;
+    padding: 1.5rem;
+  }
+  
+  .promo-card {
+    width: 320px;
+  }
+  
+  .promo-title {
+    font-size: 1.5rem;
+  }
+  
+  .new-price {
+    font-size: 1.6rem;
+  }
+  
+  .time-value {
+    font-size: 2rem;
+  }
+  
+  /* Statistics */
+  #statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .stats-item {
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    border-width: 3px;
+  }
+  
+  .stats-item i {
+    font-size: 3rem;
+  }
+  
+  .stats-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .stats-item p {
+    font-size: 1.8rem;
+  }
+  
+  /* Search */
+  .search-container {
+    max-width: 95%;
+  }
+  
+  .search-input-group input {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .filters-row {
+    border-radius: 1.2rem;
+  }
+  
+  .filter-select,
+  .filter-input {
+    padding: 1rem 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  /* General Spacing */
+  section {
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 3.5rem;
+    border-radius: 1.2rem;
+  }
+  
+  .main-section:first-of-type {
+    margin-top: 120px;
+  }
+  
+  /* Hover Effects */
+  .nav-btn__item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  .services-item:hover,
+  .contact-card:hover,
+  .stats-item:hover,
+  .faq-item .faq-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+  
+  /* Text Improvements */
+  body {
+    font-size: 1.05rem;
+  }
+  
+  /* Shadow Improvements */
+  .promo-card,
+  .services-item,
+  .contact-card,
+  .stats-item,
+  .faq-item .faq-btn {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  }
+}
+
+/* ==================================================
+   TABLET ENHANCEMENTS (769px and above)
+================================================== */
+@media only screen and (min-width: 769px) {
+  /* Navigation */
+  #navsec {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  #nav {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  #nav-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    background: var(--nav-bg, rgba(255,255,255,0.1));
+    border-radius: 1.5rem;
+    border: 2px solid var(--nav-border, rgba(255,255,255,0.2));
+  }
+  
+  .nav-btn__item {
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem 1rem !important;
+    font-size: 1.3rem;
+    gap: 1rem;
+    border-radius: 1.2rem;
+    background: var(--nav-btn-bg, rgba(255,255,255,0.15));
+    border: 2px solid var(--nav-btn-border, rgba(255,255,255,0.3));
+    transition: all 0.3s ease;
+  }
+  
+  .nav-btn__item:hover {
+    transform: translateY(-3px);
+    background: var(--nav-btn-hover-bg, rgba(255,255,255,0.25));
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  }
+  
+  .nav-btn__item i {
+    font-size: 2.8rem !important;
+  }
+  
+  .nav-btn__item span {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+  }
+  
+  /* Cart Icon */
+  #cart-icon-container {
+    width: 85px !important;
+    height: 85px !important;
+    bottom: 30px;
+    right: 30px;
+    background: var(--cart-icon-bg, rgba(255,255,255,0.1));
+    border: 3px solid var(--cart-icon-border, rgba(255,255,255,0.3));
+  }
+  
+  #cart-icon-container i {
+    font-size: 2.8rem !important;
+  }
+  
+  #cart-count {
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    border: 3px solid var(--cart-count-border, #fff);
+  }
+  
+  /* FAQ Section */
+  #faqList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .faq-item .faq-btn {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    border-width: 3px;
+    min-height: 180px;
+    justify-content: center;
+  }
+  
+  .faq-btn i {
+    font-size: 3.5rem !important;
+    margin-bottom: 1.2rem;
+  }
+  
+  .faq-btn span {
+    font-size: 1.6rem !important;
+    line-height: 1.5;
+    font-weight: 800;
+  }
+  
+  .answer-container {
+    padding: 3rem;
+    font-size: 2rem;
+    border-width: 3px;
+    border-radius: 2rem;
+    margin: 2rem auto;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Services Section */
+  #servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .services-item {
+    padding: 2rem 1.5rem;
+    border-radius: 1.8rem;
+    border-width: 3px;
+    min-height: 280px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .services-item:hover::before {
+    opacity: 1;
+  }
+
+  .services-item i {
+    font-size: 4rem !important;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+
+  .services-item:hover i {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .services-item h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  .services-item .text-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .services-item .text-wrapper p {
+    font-size: 1.3rem !important;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--service-text-color, inherit);
+    font-weight: 600;
+    text-align: center;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 0.5rem;
+  }
+
+  .services-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: var(--service-hover-border, currentColor);
+  }
+
+  .services-item:hover .text-wrapper p {
+    color: var(--service-hover-text, inherit);
+  }
+  
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+    border-width: 3px;
+    min-height: 180px;
+    justify-content: center;
+  }
+  
+  .contact-card i {
+    font-size: 3.5rem !important;
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.6rem !important;
+  }
+  
+  /* Statistics Section */
+  #statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .stats-item {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    border-width: 3px;
+    min-height: 180px;
+  }
+  
+  .stats-item i {
+    font-size: 3.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .stats-item h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .stats-item p {
+    font-size: 2.2rem !important;
+    font-weight: 800;
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .typing-line {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    margin: 1rem auto;
+  }
+  
+  /* Section Headers */
+  section h1 {
+    font-size: 3.2rem;
+    margin: 3rem auto;
+  }
+  
+  .sec-h1 h1 {
+    font-size: 3.2rem !important;
+  }
+  
+  /* About Content */
+  #aboutContent {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 0 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Forms */
+  .quick-contact-form {
+    padding: 3rem;
+    border-radius: 2rem;
+    max-width: 700px;
+  }
+  
+  .quick-contact-form input,
+  .quick-contact-form textarea,
+  .quick-contact-form select {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 1.2rem;
+    border-width: 2px;
+  }
+  
+  .qc-buttons button {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    min-height: 70px;
+  }
+  
+  /* Chatbot */
+  .chat-container {
+    max-width: 800px;
+    border-radius: 2rem;
+    margin: 2rem auto;
+  }
+  
+  .chat-header {
+    padding: 1.5rem 2rem;
+  }
+  
+  .bot-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .bot-info #bot-name {
+    font-size: 2rem;
+  }
+  
+  .bot-status {
+    font-size: 1.3rem;
+  }
+  
+  .chat-box {
+    min-height: 500px;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .message {
+    font-size: 1.3rem;
+    padding: 1.2rem 1.5rem;
+    max-width: 80%;
+  }
+  
+  .chat-input {
+    padding: 1.5rem 3.5rem;
+    font-size: 1.3rem;
+    border-radius: 2.5rem;
+  }
+  
+  .send-btn,
+  .voice-btn {
+    font-size: 1.8rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Promotions */
+  .promotions-container {
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .promo-card {
+    width: 350px;
+    border-radius: 1.5rem;
+  }
+  
+  .promo-header {
+    height: 200px;
+  }
+  
+  .promo-title {
+    font-size: 1.7rem;
+    min-height: 4em;
+  }
+  
+  .new-price {
+    font-size: 1.8rem;
+  }
+  
+  .time-value {
+    font-size: 2.2rem;
+  }
+  
+  .time-label {
+    font-size: 1rem;
+  }
+  
+  /* Search */
+  .search-container {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+  
+  .search-input-group {
+    border-radius: 2rem;
+    border-width: 2px;
+  }
+  
+  .search-input-group input {
+    padding: 1.2rem 4rem;
+    font-size: 1.3rem;
+  }
+  
+  .filters-row {
+    border-radius: 2rem;
+    border-width: 2px;
+    margin-top: 1rem;
+  }
+  
+  .filter-select,
+  .filter-input {
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* General Spacing */
+  section {
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+    border-radius: 1.5rem;
+  }
+  
+  .main-section:first-of-type {
+    margin-top: 140px;
+  }
+  
+  /* Cards */
+  .promo-card,
+  .services-item,
+  .contact-card,
+  .stats-item,
+  .faq-item .faq-btn {
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .promo-card:hover,
+  .services-item:hover,
+  .contact-card:hover,
+  .stats-item:hover,
+  .faq-item .faq-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  }
+  
+  /* Shopping Cart & Checkout */
+  #cart-popup,
+  #checkout-form-popup {
+    max-width: 600px;
+    border-radius: 2rem;
+  }
+  
+  .cart-header,
+  .checkout-header {
+    padding: 1.5rem 2rem;
+  }
+  
+  .cart-header h3,
+  .checkout-header h3 {
+    font-size: 1.8rem;
+  }
+  
+  #close-cart,
+  #close-checkout {
+    width: 45px;
+    height: 45px;
+    font-size: 2.2rem;
+  }
+}
+
+/* ==================================================
+   EXTRA LARGE SCREENS (1024px and above)
+================================================== */
+@media only screen and (min-width: 1024px) {
+  #nav-btn {
+    max-width: 1200px;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .chat-container {
+    max-width: 900px;
+  }
+  
+  .quick-contact-form {
+    max-width: 800px;
+  }
+  
+  /* Services Section Enhancements */
+  #servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .services-item {
+    min-height: 320px;
+    padding: 2.5rem 2rem;
+  }
+
+  .services-item i {
+    font-size: 4.5rem !important;
+    margin-bottom: 2rem;
+  }
+
+  .services-item h3 {
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .services-item .text-wrapper p {
+    font-size: 1.4rem !important;
+    line-height: 1.7;
+  }
+  
+  /* Navigation Spacing */
+  #navsec {
+    margin-bottom: 8rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  body::after {
+    height: 5rem;
+  }
+  
+  .main-section:first-of-type {
+    margin-top: 200px !important;
+  }
+}
+
+/* ==================================================
+   SMALL TABLET ENHANCEMENTS (769px - 1023px)
+================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  #servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .services-item {
+    min-height: 260px;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .services-item i {
+    font-size: 3.8rem !important;
+    margin-bottom: 1.2rem;
+  }
+
+  .services-item h3 {
+    font-size: 1.7rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .services-item .text-wrapper p {
+    font-size: 1.25rem !important;
+    line-height: 1.5;
+  }
+  
+  /* Portfolio Section */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  
+  .project-card {
+    min-width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .card-header {
+    height: 220px !important;
+  }
+  
+  .card-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .description {
+    font-size: 0.95rem !important;
+  }
+  
+  /* Search Container */
+  .search-container {
+    max-width: 90% !important;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Navigation Spacing */
+  #navsec {
+    margin-bottom: 6rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  body::after {
+    height: 4rem;
+  }
+  
+  .main-section:first-of-type {
+    margin-top: 180px !important;
+  }
+}
+
+/* ==================================================
+   MOBILE SPECIFIC ENHANCEMENTS
+================================================== */
+@media (max-width: 768px) {
+  .loading-logo {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .loading-message {
+    font-size: 1.1rem;
+  }
+  
+  .loading-progress-text {
+    font-size: 1rem;
+  }
+  
+  .country-code-select {
+    font-size: 0.9rem;
+  }
+  
+  .country-code-select option {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  
+  .phone-input-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .country-code-group {
+    min-width: 100%;
+  }
+  
+  .country-code-select {
+    width: 100%;
+  }
+  
+  .search-container {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  #portfolioSection {
+    margin-top: 1rem !important;
+  }
+  
+  /* Button Sizes for Mobile */
+  #checkout-btn,
+  .checkout-confirm-btn,
+  #confirm-checkout,
+  #qcSubmit,
+  .qc-buttons button,
+  .promo-button {
+      min-height: 54px;
+      font-size: 1.2rem;
+  }
+  
+  .cart-footer button,
+  .checkout-buttons button {
+      min-height: 54px;
+      font-size: 1.2rem;
+  }
+}
+
+/* ==================================================
+   VERY SMALL SCREENS FIXES
+================================================== */
+@media only screen and (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .project-card {
+    min-width: 280px !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ==================================================
+   PORTFOLIO SECTION SPECIFIC FIXES
+================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ==================================================
+   NAVBAR SPACING ENHANCEMENTS
+================================================== */
+@media only screen and (min-width: 481px) {
+  #navsec {
+    margin-bottom: 4rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Add extra space below navbar */
+  body::after {
+    content: '';
+    display: block;
+    height: 3rem;
+    width: 100%;
+    background: transparent;
+  }
+  
+  /* Portfolio Section Spacing */
+  #portfolioSection {
+    margin-top: 2rem !important;
+  }
+  
+  #portfolioSection.main-section {
+    padding-top: 1rem !important;
+  }
+}
+/* ==================================================
+   SERVICES SECTION FIX FOR MOBILE (480px and below)
+================================================== */
+@media only screen and (max-width: 480px) {
+  .services-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 1rem 0.5rem !important;
+  }
+  
+  .services-item .text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    flex-grow: 1 !important;
+    margin-top: auto !important;
+  }
+  
+  .services-item .text-wrapper p {
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding-top: 0.5rem !important;
+  }
+}
+
+/* ==================================================
+   SEARCH SECTION POSITION FIX FOR TABLET (768px and above)
+================================================== */
+@media only screen and (min-width: 768px) {
+  #portfolioSection {
+    margin-top: 140px !important;
+    padding-top: 2rem !important;
+  }
+  
+  .search-container {
+    margin-top: 1rem !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Ensure navbar doesn't overlap */
+  #navsec {
+    z-index: 1000 !important;
+  }
+  
+  .main-section:first-of-type {
+    margin-top: 160px !important;
+  }
+}
+
+/* ==================================================
+   ADDITIONAL FIX FOR LARGER TABLETS (769px - 1024px)
+================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #portfolioSection {
+    margin-top: 150px !important;
+  }
+  
+  .search-container {
+    margin-top: 1.5rem !important;
+  }
+}
+/* ==================================================
+   QUICK CONTACT SECTION FIX FOR MOBILE (480px and below)
+================================================== */
+@media only screen and (max-width: 480px) {
+  #quickContactSection {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .quick-contact-form {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    padding: 1.5rem !important;
+    border-radius: 1rem !important;
+  }
+  
+  .quick-contact-form .form-group {
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .quick-contact-form input,
+  .quick-contact-form textarea,
+  .quick-contact-form select {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .qc-buttons button {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 1rem !important;
+    min-width: 140px !important;
+  }
+  
+  .phone-input-row {
+    gap: 0.5rem !important;
+  }
+  
+  .country-code-group {
+    min-width: 140px !important;
+  }
+}

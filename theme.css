@@ -1,0 +1,577 @@
+@supports not (--custom: value) {
+  body { background-color: #0d1b2a; color: white; }
+}
+
+html {
+  visibility: hidden;
+  transition: all 4s ease-in-out;
+}
+
+html.theme-day,
+html.theme-wine,
+html.theme-sunset,
+html.theme-coffee {
+  visibility: visible;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Navigation Colors */
+#nav-btn .nav-btn__item i,
+#nav-btn .nav-btn__item span {
+  color: var(--nav-btn-color) !important;
+  transition: color 3s ease !important;
+  will-change: color;
+}
+
+/* Canvas Backgrounds */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 6s ease;
+}
+
+.theme-day {
+  background-color: #0d1b2a;
+}
+
+.theme-wine {
+  background-color: #315426;
+}
+
+.theme-sunset {
+  background: #4a0033;
+}
+
+.theme-coffee {
+  background-color: #4b382a;
+}
+
+.theme-day #day-canvas,
+.theme-wine #wine-canvas,
+.theme-sunset #sunset-canvas,
+.theme-coffee #coffee-canvas {
+  opacity: 1;
+}
+
+/* Wine Theme Overlay */
+.theme-wine::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center,
+    rgba(157,114,67,0.2) 0%,
+    rgba(157,114,67,0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==================== THEME VARIABLES ==================== */
+
+/* Day Theme */
+html.theme-day {
+  --welcome-color: #ff9e64;
+  --section-bg: rgba(0,0,0,0);
+  --h1-color: #ff9e64;
+  --nav-bg: rgba(26, 38, 57, 0.9);
+  --nav-btn-color: #ff9e64;
+  --nav-btn-bg: transparent;
+  --nav-icon-color: #ff9e64;
+  --nav-active-color: #ff9e6420;
+  
+  --offer-border: transparent;
+  --offer-text-color: #ff9e64;
+  --offer-bg: rgba(26, 38, 57, 0.6);
+  --offer-title-color: #ff9e64;
+  --offer-title-shadow: 0 0 10px rgba(255, 158, 100, 0.5);
+  --offer-discount-color: #ff9e64;
+  --offer-discount-ground: rgba(65, 90, 119, 0.7);
+  --offer-discount-shadow: 0 0 8px rgba(255, 158, 100, 0.6);
+  
+  --timeblock-bg: rgba(65, 90, 119, 0.8);
+  --time-number-color: #ff9e64;
+  --time-number-shadow: 0 0 6px rgba(255, 158, 100, 0.7);
+  --time-label-color: #ff9e64;
+  --time-colon-color: #ff9e64;
+  --time-colon-shadow: 0 0 5px rgba(255, 158, 100, 0.7);
+  
+  --bot-border: transparent;
+  --bot-bg: rgba(65, 90, 119, 0.7);
+  --bot-name-color: #ff9e64;
+  --bot-scroll-thumb: rgba(65, 90, 119, 0.7);
+  --bot-msg-border: rgba(65, 90, 119, 0.7);
+  --bot-msg-bg: rgba(65, 90, 119, 0.7);
+  --bot-msg-text: #ff9e64;
+  --bot-msg-arrow-bg: rgba(65, 90, 119, 0.7);
+  
+  --user-msg-bg: rgba(65, 90, 119, 0.9);
+  --user-msg-border: rgba(65, 90, 119, 0.9);
+  --user-msg-text: #ff9e64;
+  --user-msg-arrow-bg: rgba(65, 90, 119, 0.9);
+  
+  --input-text-color: ;
+  --input-placeholder-color: #ff9e64;
+  --input-icon-color: #ff9e64;
+  
+  --bot-btn-bg: rgba(65, 90, 119, 0.7);
+  --bot-btn-border: rgba(65, 90, 119, 0.7);
+  --bot-btn-hover-bg: rgba(65, 90, 119, 0.1);
+  --bot-btn-before-bg: rgba(65, 90, 119, 0.7);
+  
+  --aboutme-text-color: #ff9e64;
+  
+  --quickcontact-input-border: #ff9e64;
+  --quickcontact-label-color: #ff9e64;
+  --quickcontact-focus-border: #ff9e64;
+  --quickcontact-focus-text: #ff9e64;
+  --quickcontact-btn-border: #ff9e64;
+  --quickcontact-btn-text: #ff9e64;
+  --quickcontact-btn-hover-bg: #ff9e64;
+  --quickcontact-btn-hover-text: #0d1b2a;
+  --quickcontact-success-border: #ff9e64;
+  --quickcontact-success-text: #ff9e64;
+  
+  --caard-color: rgba(0,0,0,0.6);
+  
+  --cart-bg: rgba(65, 90, 119, 0.9);
+  --cart-text: #ff9e64;
+  --cart-border: #ff9e64;
+  --cart-btn-bg: #ff9e64;
+  --cart-btn-text: #0d1b2a;
+  --cart-btn-hover: #ff9e6488;
+  --cart-remove: #ff9e64;
+  --cart-item-bg: transparent;
+  --cart-item-border: #ff9e64;
+  
+  --search-dropdown-bg: rgba(65, 90, 119, 0.8);
+  --search-dropdown-text: #ff9e64;
+  --search-dropdown-border: #ff9e64;
+  
+  --cart-quantity-border: #ff9e64;
+  --cart-quantity-bg: rgba(255, 158, 100, 0.1);
+  --cart-quantity-btn-bg: transparent;
+  --cart-quantity-btn-color: #ff9e64;
+  --cart-quantity-btn-hover: rgba(255, 158, 100, 0.2);
+  --cart-quantity-input-bg: transparent;
+  --cart-quantity-input-color: #ff9e64;
+  --cart-remove-bg: transparent;
+  --cart-remove-color: #e74c3c;
+  --cart-remove-hover: rgba(231, 76, 60, 0.2);
+  
+  --promo-quantity-border: #ff9e64;
+  --promo-quantity-bg: rgba(255, 158, 100, 0.1);
+  --promo-quantity-btn-bg: transparent;
+  --promo-quantity-btn-color: #ff9e64;
+  --promo-quantity-btn-hover: rgba(255, 158, 100, 0.2);
+  --promo-quantity-input-color: #ff9e64;
+  
+  --promo-button-border: #ff9e64;
+  --promo-button-text: #ff9e64;
+  --promo-button-bg: #ff9e64;
+  --promo-button-hover-text: #0d1b2a;
+  
+  --promo-banner-bg-1: #ff9e64;
+  --promo-banner-bg-2: #ff9e64;
+  --promo-banner-border: #ff9e64;
+  --promo-banner-text: #0d1b2a;
+  --promo-banner-shine: rgba(255, 255, 255, 0.8);
+  
+  --promo-original-price: #ff9e64;
+  --promo-new-price: #ff9e64;
+  --promo-new-price-bg: rgba(255, 158, 100, 0.2);
+  
+  --promo-timer-bg: rgba(255, 158, 100, 0.1);
+  --promo-timer-border: #ff9e64;
+  --promo-timer-number: #ff9e64;
+  --promo-timer-number-bg: rgba(255, 158, 100, 0.2);
+  --promo-timer-label: #ff9e64;
+  --promo-timer-colon: #ff9e64;
+  
+  --promo-button-bg: #ff9e64;
+  --promo-button-text: #0d1b2a;
+  --promo-button-hover-bg: #ff8e50;
+}
+
+/* Wine Theme */
+html.theme-wine {
+  --welcome-color: #c0b49e;
+  --section-bg: transparent;
+  --h1-color: #c0b49e;
+  --nav-bg: transparent;
+  --nav-btn-color: #c0b49e;
+  --nav-btn-bg: transparent;
+  --nav-icon-color: #c0b49e;
+  --nav-active-color: #c0b49e;
+  
+  --offer-border: transparent;
+  --offer-text-color: #c0b49e;
+  --offer-bg: rgba(192, 180, 158, 0.1);
+  --offer-title-color: #c0b49e;
+  --offer-title-shadow: 1px 1px 4px #00000055;
+  --offer-discount-color: #315426;
+  --offer-discount-ground: #c0b49e;
+  --offer-discount-shadow: 0 0 6px #c0b49e88;
+  
+  --timeblock-bg: #c0b49e;
+  --time-number-color: #315426;
+  --time-number-shadow: 0 0 4px #315426;
+  --time-label-color: #315426;
+  --time-colon-color: #315426;
+  --time-colon-shadow: 0 0 4px #315426;
+  
+  --bot-border: transparent;
+  --bot-bg: #c0b49e;
+  --bot-name-color: #315426;
+  --bot-scroll-thumb: #c0b49e;
+  --bot-msg-border: #c0b49e;
+  --bot-msg-bg: #c0b49e;
+  --bot-msg-text: #315426;
+  --bot-msg-arrow-bg: #c0b49e;
+  
+  --user-msg-bg: #315426;
+  --user-msg-border: #315426;
+  --user-msg-text: #c0b49e;
+  --user-msg-arrow-bg: #315426;
+  
+  --input-text-color: ;
+  --input-placeholder-color: #315426;
+  --input-icon-color: #315426;
+  
+  --bot-btn-bg: rgba(255, 255, 255, 0.1);
+  --bot-btn-border: #c0b49e;
+  --bot-btn-hover-bg: #c0b49e;
+  --bot-btn-before-bg: rgba(255, 255, 255, 0.7);
+  
+  --aboutme-text-color: #c0b49e;
+  
+  --quickcontact-input-border: #c0b49e;
+  --quickcontact-label-color: #c0b49e;
+  --quickcontact-focus-border: #c0b49e;
+  --quickcontact-focus-text: #c0b49e;
+  --quickcontact-btn-border: #c0b49e;
+  --quickcontact-btn-text: #c0b49e;
+  --quickcontact-btn-hover-bg: #c0b49e;
+  --quickcontact-btn-hover-text: #315426;
+  --quickcontact-success-border: #c0b49e;
+  --quickcontact-success-text: #c0b49e;
+  
+  --caard-color: rgba(0,0,0,0.6);
+  
+  --cart-bg: #315426;
+  --cart-text: #c0b49e;
+  --cart-border: #c0b49e;
+  --cart-btn-bg: #c0b49e;
+  --cart-btn-text: #315426;
+  --cart-btn-hover: #d7cdb2;
+  --cart-remove: #c0b49e;
+  --cart-item-bg: transparent;
+  --cart-item-border: #c0b49e;
+  
+  --search-dropdown-bg: #c0b49e;
+  --search-dropdown-text: #315426;
+  --search-dropdown-border: #315426;
+  
+  --cart-quantity-border: #c0b49e;
+  --cart-quantity-bg: rgba(192, 180, 158, 0.1);
+  --cart-quantity-btn-bg: transparent;
+  --cart-quantity-btn-color: #c0b49e;
+  --cart-quantity-btn-hover: rgba(192, 180, 158, 0.2);
+  --cart-quantity-input-bg: transparent;
+  --cart-quantity-input-color: #c0b49e;
+  --cart-remove-bg: transparent;
+  --cart-remove-color: #e74c3c;
+  --cart-remove-hover: rgba(231, 76, 60, 0.2);
+  
+  --promo-quantity-border: #c0b49e;
+  --promo-quantity-bg: rgba(192, 180, 158, 0.1);
+  --promo-quantity-btn-bg: transparent;
+  --promo-quantity-btn-color: #c0b49e;
+  --promo-quantity-btn-hover: rgba(192, 180, 158, 0.2);
+  --promo-quantity-input-color: #c0b49e;
+  
+  --promo-button-border: #c0b49e;
+  --promo-button-text: #c0b49e;
+  --promo-button-bg: #c0b49e;
+  --promo-button-hover-text: #315426;
+  
+  --promo-banner-bg-1: #c0b49e;
+  --promo-banner-bg-2: #d7cdb2;
+  --promo-banner-border: #a89f8a;
+  --promo-banner-text: #315426;
+  --promo-banner-shine: rgba(255, 255, 255, 0.6);
+  
+  --promo-original-price: #c0b49e;
+  --promo-new-price: #c0b49e;
+  --promo-new-price-bg: rgba(49, 84, 38, 0.1);
+  
+  --promo-timer-bg: rgba(192, 180, 158, 0.1);
+  --promo-timer-border: #c0b49e;
+  --promo-timer-number: #c0b49e;
+  --promo-timer-number-bg: rgba(192, 180, 158, 0.2);
+  --promo-timer-label: #c0b49e;
+  --promo-timer-colon: #c0b49e;
+  
+  --promo-button-bg: #c0b49e;
+  --promo-button-text: #315426;
+  --promo-button-hover-bg: #d7cdb2;
+}
+
+/* Sunset Theme */
+html.theme-sunset {
+  --welcome-color: #c0b49e;
+  --section-bg: transparent;
+  --h1-color: #c0b49e;
+  --nav-bg: transparent;
+  --nav-btn-color: #c0b49e;
+  --nav-btn-bg: transparent;
+  --nav-icon-color: #c0b49e;
+  --nav-active-color: #c0b49e;
+  
+  --offer-border: transparent;
+  --offer-text-color: #c0b49e;
+  --offer-bg: rgba(192, 180, 158, 0.1);
+  --offer-title-color: #c0b49e;
+  --offer-title-shadow: 1px 1px 4px #00000055;
+  --offer-discount-color: #c0b49e;
+  --offer-discount-ground: #4a0033;
+  --offer-discount-shadow: 0 0 6px #c0b49e88;
+  
+  --timeblock-bg: #4a0033;
+  --time-number-color: #c0b49e;
+  --time-number-shadow: 0 0 4px #c0b49e55;
+  --time-label-color: #c0b49e;
+  --time-colon-color: #c0b49e;
+  --time-colon-shadow: 0 0 4px #c0b49e66;
+  
+  --bot-border: transparent;
+  --bot-bg: #c0b49e;
+  --bot-name-color: #4a0033;
+  --bot-scroll-thumb: #c0b49e;
+  --bot-msg-border: #c0b49e;
+  --bot-msg-bg: #c0b49e;
+  --bot-msg-text: #4a0033;
+  --bot-msg-arrow-bg: #c0b49e;
+  
+  --user-msg-bg: #4a0033;
+  --user-msg-border: #4a0033;
+  --user-msg-text: #c0b49e;
+  --user-msg-arrow-bg: #4a0033;
+  
+  --input-text-color: ;
+  --input-placeholder-color: #4a0033;
+  --input-icon-color: #4a0033;
+  
+  --bot-btn-bg: rgba(255, 255, 255, 0.1);
+  --bot-btn-border: #c0b49e;
+  --bot-btn-hover-bg: #c0b49e;
+  --bot-btn-before-bg: rgba(255, 255, 255, 0.7);
+  
+  --aboutme-text-color: #c0b49e;
+  
+  --quickcontact-input-border: #c0b49e;
+  --quickcontact-label-color: #c0b49e;
+  --quickcontact-focus-border: #c0b49e;
+  --quickcontact-focus-text: #c0b49e;
+  --quickcontact-btn-border: #c0b49e;
+  --quickcontact-btn-text: #c0b49e;
+  --quickcontact-btn-hover-bg: #c0b49e;
+  --quickcontact-btn-hover-text: #4a0033;
+  --quickcontact-success-border: #c0b49e;
+  --quickcontact-success-text: #c0b49e;
+  
+  --caard-color: rgba(0,0,0,0.6);
+  
+  --cart-bg: #4a0033;
+  --cart-text: #c0b49e;
+  --cart-border: #c0b49e;
+  --cart-btn-bg: #c0b49e;
+  --cart-btn-text: #4a0033;
+  --cart-btn-hover: #c0b49e;
+  --cart-remove: #c0b49e;
+  --cart-item-bg: #4a0033;
+  --cart-item-border: #c0b49e;
+  
+  --search-dropdown-bg: #c0b49e;
+  --search-dropdown-text: #4a0033;
+  --search-dropdown-border: #4a0033;
+  
+  --cart-quantity-border: #c0b49e;
+  --cart-quantity-bg: rgba(192, 180, 158, 0.1);
+  --cart-quantity-btn-bg: transparent;
+  --cart-quantity-btn-color: #c0b49e;
+  --cart-quantity-btn-hover: rgba(192, 180, 158, 0.2);
+  --cart-quantity-input-bg: transparent;
+  --cart-quantity-input-color: #c0b49e;
+  --cart-remove-bg: transparent;
+  --cart-remove-color: #e74c3c;
+  --cart-remove-hover: rgba(231, 76, 60, 0.2);
+  
+  --promo-quantity-border: #c0b49e;
+  --promo-quantity-bg: rgba(192, 180, 158, 0.1);
+  --promo-quantity-btn-bg: transparent;
+  --promo-quantity-btn-color: #c0b49e;
+  --promo-quantity-btn-hover: rgba(192, 180, 158, 0.2);
+  --promo-quantity-input-color: #c0b49e;
+  
+  --promo-button-border: #c0b49e;
+  --promo-button-text: #c0b49e;
+  --promo-button-bg: #c0b49e;
+  --promo-button-hover-text: #4a0033;
+  
+  --promo-banner-bg-1: #c0b49e;
+  --promo-banner-bg-2: #e6d5b8;
+  --promo-banner-border: #a89f8a;
+  --promo-banner-text: #4a0033;
+  --promo-banner-shine: rgba(255, 255, 255, 0.6);
+  
+  --promo-original-price: #c0b49e;
+  --promo-new-price: #c0b49e;
+  --promo-new-price-bg: rgba(192, 180, 158, 0.1);
+  
+  --promo-timer-bg: rgba(192, 180, 158, 0.1);
+  --promo-timer-border: #c0b49e;
+  --promo-timer-number: #c0b49e;
+  --promo-timer-number-bg: rgba(192, 180, 158, 0.2);
+  --promo-timer-label: #c0b49e;
+  --promo-timer-colon: #c0b49e;
+  
+  --promo-button-bg: #c0b49e;
+  --promo-button-text: #4a0033;
+  --promo-button-hover-bg: #e6d5b8;
+}
+
+/* Coffee Theme */
+html.theme-coffee {
+  --welcome-color: #fff3cc;
+  --section-bg: transparent;
+  --h1-color: #fff3cc;
+  --nav-bg: rgba(0,0,0,0);
+  --nav-btn-color: #fff3cc;
+  --nav-btn-bg: transparent;
+  --nav-icon-color: #fff3cc;
+  --nav-active-color: #fff3cc;
+  
+  --offer-border: transparent;
+  --offer-text-color: #fff3cc;
+  --offer-bg: rgba(0,0,0,0.1);
+  --offer-title-color: #fff3cc;
+  --offer-title-shadow: #fff3cc;
+  --offer-discount-color: #fff3cc;
+  --offer-discount-ground: #fff3cc11;
+  --offer-discount-shadow: #fff3cc;
+  
+  --timeblock-bg: #fff3cc11;
+  --time-number-color: #fff3cc;
+  --time-number-shadow: #fff3cc;
+  --time-label-color: #fff3cc;
+  --time-colon-color: #fff3cc;
+  --time-colon-shadow: #fff3cc;
+  
+  --bot-border: #6e5849;
+  --bot-bg: #6e5849;
+  --bot-name-color: #fff3cc;
+  --bot-scroll-thumb: #6e5849;
+  --bot-msg-border: #6e5849;
+  --bot-msg-bg: #6e5849;
+  --bot-msg-text: #fff3cc;
+  --bot-msg-arrow-bg: #6e5849;
+  
+  --user-msg-bg: #fff3cc;
+  --user-msg-border: #fff3cc;
+  --user-msg-text: black;
+  --user-msg-arrow-bg: #fff3cc;
+  
+  --input-text-color: #6e5849;
+  --input-placeholder-color: #fff3cc;
+  --input-icon-color: #fff3cc;
+  
+  --bot-btn-bg: #4b382a20;
+  --bot-btn-border: #4b382a20;
+  --bot-btn-hover-bg: #4b382a80;
+  --bot-btn-before-bg: #4b382a20;
+  
+  --aboutme-text-color: #fff3cc;
+  
+  --quickcontact-input-border: #fff3cc;
+  --quickcontact-label-color: #fff3cc;
+  --quickcontact-focus-border: #fff3cc;
+  --quickcontact-focus-text: #fff3cc;
+  --quickcontact-btn-border: #fff3cc;
+  --quickcontact-btn-text: #fff3cc;
+  --quickcontact-btn-hover-bg: #fff3cc;
+  --quickcontact-btn-hover-text: black;
+  --quickcontact-success-border: #fff3cc;
+  --quickcontact-success-text: #fff3cc;
+  
+  --caard-color: rgba(0,0,0,0.2);
+  
+  --cart-bg: #4b382a;
+  --cart-text: #fff3cc;
+  --cart-border: #fff3cc;
+  --cart-btn-bg: #fff3cc;
+  --cart-btn-text: #4b382a;
+  --cart-btn-hover: #4b382a88;
+  --cart-remove: #fff3cc;
+  --cart-item-bg: #4b382a;
+  --cart-item-border: #a1887f;
+  
+  --search-dropdown-bg: #6e5849;
+  --search-dropdown-text: #fff3cc;
+  --search-dropdown-border: #fff3cc;
+  
+  --cart-quantity-border: #fff3cc;
+  --cart-quantity-bg: rgba(255, 243, 204, 0.1);
+  --cart-quantity-btn-bg: transparent;
+  --cart-quantity-btn-color: #fff3cc;
+  --cart-quantity-btn-hover: rgba(255, 243, 204, 0.2);
+  --cart-quantity-input-bg: transparent;
+  --cart-quantity-input-color: #fff3cc;
+  --cart-remove-bg: transparent;
+  --cart-remove-color: #e74c3c;
+  --cart-remove-hover: rgba(231, 76, 60, 0.2);
+  
+  --promo-quantity-border: #fff3cc;
+  --promo-quantity-bg: rgba(255, 243, 204, 0.1);
+  --promo-quantity-btn-bg: transparent;
+  --promo-quantity-btn-color: #fff3cc;
+  --promo-quantity-btn-hover: rgba(255, 243, 204, 0.2);
+  --promo-quantity-input-color: #fff3cc;
+  
+  --promo-button-border: #fff3cc;
+  --promo-button-text: #fff3cc;
+  --promo-button-bg: #fff3cc;
+  --promo-button-hover-text: #4b382a;
+  
+  --promo-banner-bg-1: #fff3cc;
+  --promo-banner-bg-2: #fff9e6;
+  --promo-banner-border: #e6d5a3;
+  --promo-banner-text: #4b382a;
+  --promo-banner-shine: rgba(255, 255, 255, 0.6);
+  
+  --promo-original-price: #fff3cc;
+  --promo-new-price: #fff3cc;
+  --promo-new-price-bg: rgba(255, 243, 204, 0.1);
+  
+  --promo-timer-bg: rgba(255, 243, 204, 0.1);
+  --promo-timer-border: #fff3cc;
+  --promo-timer-number: #fff3cc;
+  --promo-timer-number-bg: rgba(255, 243, 204, 0.2);
+  --promo-timer-label: #fff3cc;
+  --promo-timer-colon: #fff3cc;
+  
+  --promo-button-bg: #fff3cc;
+  --promo-button-text: #4b382a;
+  --promo-button-hover-bg: #fff9e6;
+}
