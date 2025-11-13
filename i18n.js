@@ -19,7 +19,7 @@ let translations = {
   home: { ar: 'الرئيسية', en: 'Home' },
   prjct: { ar: 'المتجر', en: 'Store' },
   theme: { ar: 'الثيم', en: 'Theme' },
-  ar: { ar: 'ar', en: 'en' },
+  ar: { ar: 'اللغه', en: 'en' },
   
   // ============= العروض والتخفيضات =============
   promo_title: { ar: "العروض", en: "Offers" },
