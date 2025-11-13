@@ -151,9 +151,9 @@ let translations = {
   // ============= قسم تتبع الطلبات - تم إصلاحه بالكامل =============
   track_my_order: { ar: 'طلبياتي', en: 'My Order' },
   my_orders: { ar: 'طلبياتي', en: 'My Orders' },
-  searching_orders: { ar: 'جاري تحميل الطلبات...', en: 'Loading orders...' },
+  searching_orders: { ar: 'جاري تحميل الطلبيات...', en: 'Loading orders...' },
   no_orders_found: { ar: 'لا توجد طلبات', en: 'No orders found' },
-  no_orders_message: { ar: 'لم تقم بأي طلبات بعد', en: 'You have not made any orders yet' },
+  no_orders_message: { ar: 'لم تقم بأي طلبيات بعد', en: 'You have not made any orders yet' },
   back_to_orders: { ar: '', en: '' },
   details_o: { ar: 'تفاصيل الطلب', en: 'Order Details' },
 
